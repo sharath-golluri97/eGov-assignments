@@ -17,10 +17,13 @@ lli add(lli a,lli b){return (a%mod + b%mod)%mod;}
 
 map<int,vector<int> > hashMap;
 map<int,int> indegree;
+
+//Error
 void ERR(){
     cout<<"There is input error from file"<<endl;
 }
 
+//String trimming 
 int trim(string s){
     int i = 0;
     while(s[i] == ' '){
@@ -34,6 +37,7 @@ int trim(string s){
     return node;
 }
 
+//Insertion
 void insert(string fromString,string toString){
     int from = trim(fromString);
     int to = trim(toString);
@@ -41,6 +45,7 @@ void insert(string fromString,string toString){
     indegree[to]++;
 }
 
+//Split
 void split(string line){
     string delimiter = ",";
     size_t pos = 0;
@@ -53,6 +58,7 @@ void split(string line){
     }
 }
 
+//Print
 void print(){
     for(map<int,vector<int> > :: iterator it = hashMap.begin();it != hashMap.end();it++){
         cout<<it->first<<" - >  ";
@@ -66,6 +72,7 @@ void print(){
 
 }
 
+//DFS
 void dfs(vector<int> path){
     int prerequisite = path.back();
     vector<int> list = hashMap[prerequisite];

@@ -3,7 +3,9 @@ Problem statements given as a part of eGov selection process
 
 ## Graph problem
 **How to run**   
+    
     $ g++ -std=c++11 Solution.cpp
+    
     $ ./a.out
 
 ## React problem
